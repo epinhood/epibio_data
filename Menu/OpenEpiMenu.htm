@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN"
+   "http://www.w3.org/TR/html4/frameset.dtd">
+<html>
+<head>
+<title>OpenEpi--Epidemiologic Calculators</title>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html;charset=UTF-8">
+<meta name="KEYWORDS" content="epidemiology, statistics, calculator, free, open source, SMR, standardized mortality ratio, person-time rates, proportion, JavaScript, two-by-two table, 2x2 table, odds ratio, exact confidence limits, Fisher exact, mid-p exact, ANOVA, t-test, means, random number generator, power, sample size">
+<meta name="DESCRIPTION" content="Free, open source statistical calculators and links for epidemiology. Proportions, person-time, SMR, two-by-two tables with OR, RR and exact statistics, diagnostic screening, means, ANOVA, t-test, power, sample size, and links to other epi sites and search engines. Run from the web in modern browsers or download to disk.">
+
+<!--
+(c) Andrew G. Dean and Kevin M. Sullivan, Rollins School of Public Health, Emory University
+ 
+This is the frameset for the main menu of OpenEpi.  To change the menu items, edit the file called CODE.HTML.
+
+OpenEpi is an Open Source project, supported in part by a grant from the Bill and Melinda Gates Foundation 
+to Emory University to enhance the statistical capabilities of Epi Info, a public domain software package.
+
+The Open Source movement is based on providing free access to source code so that it can be understood, 
+criticized, and improved by a wide audience. We would prefer to develop our
+own license along the lines of:
+
+“OpenEpi source code, documentation, and concepts are available to all to use as they wish.  
+Please help improve the code by sending suggestions or new code back to the authors. We suggest citation 
+to acknowledge contributing authors’ works as with any scientific publication.
+
+The user assumes responsibility for determining appropriate use of the software, for consequences of its use, 
+and for checking results against other reliable sources. No warrantee of any kind is given. ”
+
+Since the wording above does not constitute an approved Open Source license, we have also chosen to apply the 
+“MIT License” found on the www.opensource.org site."
+
+The menu uses a Javascript control called dTree, copyrighted by Geir Landro whose email address can be obtained by 
+clicking his name in the tree frame.  His license allows free use and distribution.
+-->
+<script language="JavaScript" type="text/JavaScript">
+  var basefilename="";  //The name from which other filenames are constructed in AppHelper.js
+                              //There is no js file to go with the menu; hence set this to null                            
+</script>
+
+<!-- From the IncludeFiles.js section, ancillary modules are included that contain necessary code.  Generally you will not
+have to alter code in these modules, but they are all available as part of the source, and are listed in IncludeFiles.js. -->
+
+<SCRIPT language="JavaScript" src="../Etable/Etable_files/IncludeFiles.js" type="text/JavaScript"></SCRIPT>
+
+<script language="JavaScript" type="text/JavaScript">
+
+function refreshmenu()
+{
+  setTimeout("window.location.reload(true)",4000);  //may not work to reset language
+  //alert("refreshing");
+}
+
+</script>
+	
+</head>
+<frameset frameborder="0" border="0" framespacing="0" cols="200,*" rows="*" >
+  <frame application="yes" marginwidth="5" marginheight="5" src="code.html" name="menu" id="menu"  scrolling="auto">
+  <frame application="yes" marginwidth="5" marginheight="5" src="main.html" name="main" id="main" noresize scrolling="auto">
+   <noframes>
+      <p>This page requires a browser that allows &quot;frames&quot;.  Many modern browsers are available for free downloading.</p>
+   </noframes>
+</frameset>
+
+
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<link rel=Edit-Time-Data href="main_files/editdata.mso">
+<title>OpenEpi Epidemiologic Statistics, Version 2.3.1</title>
+
+<SCRIPT TYPE ="text/javascript">
+<!-- 
+var headtitle="Open Source Epidemiologic Statistics for Public Health";
+
+//var modDate = new Date(document.lastModified);
+var modDate = "2010/19/09" ; //NOTE: THIS DATE MUST BE INSERTED MANUALLY TO SATISFY GOOGLE CHROME,
+//in which lastModified does not work
+
+function fixDate(theDate)
+{
+   var day =theDate.getDate();
+   var month = theDate.getMonth() + 1;
+   var year = theDate.getYear();
+   if (day < 10) day = "0" + day;
+   if (month < 10) month = "0" + month;
+   if (year < 2000) year += 1900;
+   return year + "/"+month + "/"+day;
+}
+//alert("modDate="+modDate)
+//modDate=fixDate(modDate);
+//alert("modDate="+modDate)
+var dateToday=fixDate(new Date());
+var heading =fe
+var updated="Updated " ;
+var lcupdated="updated ";
+var version="Version"
+var versionNum="2.3.1"
+var banner ="Now in English, French, Spanish, and Italian";
+var accessed ="accessed";
+var citation="Suggested citation";
+var and="and";
+if (parent.t) 
+    {
+	 updated=parent.t(updated)
+	 lcupdated=parent.t(lcupdated);
+	 version=parent.t(version)
+	 version=version +" "+versionNum
+	 banner=parent.t(banner)
+	 headtitle=parent.t(headtitle)
+	 accessed=parent.t(accessed)
+	 citation=parent.t(citation)
+	 and=parent.t(and);
+    }
+    else
+    {version=version+" "+versionNum;}
+	
+var fe ='<table width="100%" border="0" cellspacing="0" cellpadding="5" style="background-color:#008899;color:#ffffff">';
+fe+='  <tr>'; 
+fe+='    <td rowspan="2">';
+fe+='      <img src="../Etable/images/OpenEpi1.gif" name="logo" width="184" height="51"><br/>';
+fe+='<span style="margin-left:60px;font-size:1.3em"><strong>'+version+'</strong></span>';
+fe+='    </td>';
+fe+='    <td width="100%">'
+fe+='<span style=font-size:0.2em>&nbsp;<br/></span>'
+fe+='<span style=font-size:1.7em;font-weight:bold;>'
+fe+=headtitle+'</span><br/><br/>';
+fe +='<span style = "color:yellow;font-size:1.3em;margin-left:10%;">'+'<i>'+banner+'<i>'+ '</span>';
+
+	
+var heading =fe;
+heading+='</td></tr><tr><td width=30% align="right" color="#ffffff">' 
+heading+= "<strong>"+updated+" "+ modDate+ "&nbsp;&nbsp;&nbsp;&nbsp;</strong>" ;
+
+heading+='  </td></tr> </table>';
+//alert(heading)
+
+var intro = new Array();
+
+ 
+intro[0]="<p>OpenEpi provides statistics for counts and measurements in descriptive and analytic studies, "+ 
+"stratified analysis with exact confidence limits, matched pair and person-time analysis, sample size and power calculations, random numbers, "+
+"sensitivity, specificity and other evaluation statistics, R x C tables, chi-square for dose-response, "+ 
+"and links to other useful sites.</p>";
+
+intro[1]="<p>OpenEpi is free and "+
+"<b>open source</b> software for epidemiologic statistics. It can "+
+"be run from a web server or downloaded and run "+
+"without a web connection.  A server is not required. "+
+"The programs are written in JavaScript and HTML, and should "+
+"be compatible with recent Linux, Mac, and PC browsers, regardless of operating system. "+
+"(If you are seeing this, your browser settings are allowing JavaScript.) "+
+"A new tabbed interface avoids popup windows except for help files.</p>" 	  
+ 
+intro[2]="<p>Test results are provided for each module so "+
+"that you can judge reliability, although it "+
+"is always a good idea to check important results with software from more than one "+
+"source. Links to hundreds of Internet calculators are provided.</p> ";
+
+intro[3]="<p>The programs have an open source license "+
+"and can be downloaded, distributed, or translated. Some of the "+
+"components from other sources have licensing statements "+
+"in the source code files. Licenses referred "+
+"to are available in full text at  "+
+"<a href='http://OpenSource.org/licenses'>OpenSource.org/licenses</a>.  "+
+"OpenEpi development was supported in part by a grant from the "+
+"<a href='http://www.gatesfoundation.org'>Bill and Melinda Gates Foundation "+
+"</a>to Emory University, <a href='http://www.sph.emory.edu'>Rollins School of Public Health</a>.</p>";
+
+intro[4]="A toolkit for creating new modules and for translation is "+
+"included. Please let us know if you would like to collaborate in this way. "+
+"Suggestions, comments, and expressions of interest in contributing to this "+
+"effort should be sent by email to: ";
+
+function writeIntro()
+{ var s=""
+  var c=0;
+  var i;
+  var phrase;
+   s+= heading+'<div class=Section1>'+
+      '<img width=313 height=420 src="main_files/image002.jpg" align=left hspace=12 v:shapes="_x0000_s1026">'+
+      '<span style="color:#003366">';
+  
+ // while ((parent.heading.t==null) && (c<20000))
+ //  {c++}
+  for (i=0; i<intro.length; i++)
+  {
+  // alert("length="+intro[i].length);
+   if (typeof(parent.t)=="function") 
+      {
+	  s+=parent.t(intro[i])
+	  }
+    else 
+	  {
+	   s+=intro[i]
+	  }
+   }
+   
+   s+="</span><span style='color:#003366;text-align:center;'>";
+ //  s+="Andy Dean, Kevin Sullivan and Minn M. Soe";
+   var username = "andy.dean";
+   var hostname = "gmail.com";
+   var linktext = username + "@" + hostname;
+   s+=" <a href=" + "mail" + "to:" + username +
+      "@" + hostname + ">" + linktext + "</a>"   
+   
+   var username = "cdckms";
+   var hostname = "sph.emory.edu";
+   var linktext = username + "@" + hostname;
+   s+=", <a href=" + "mail" + "to:" + username +
+      "@" + hostname + ">" + linktext + "</a>"
+   
+   
+   var username = "msoe";
+   var hostname = "sph.emory.edu";
+   var linktext = username + "@" + hostname;
+   s+=", " +and + " <a href=" + "mail" + "to:" + username +
+      "@" + hostname + ">" + linktext + "</a>"
+	  
+// s+= "<br>Atlanta, Georgia, USA</p>";
+/*   var myDate= new Date()
+   var theYear=myDate.getFullYear()
+   var theMonth=myDate.getMonth()+1
+   var theDay=myDate.getDate()
+   if (theDay < 10) {theDay = "0" + theDay;}
+   if (month < 10) month = "0" + month;
+   if (year < 2000) year += 1900;
+   var dateToday=theYear+"/" +theMonth+"/" +theDay
+*/
+   s+= " <p style='text-align:center;font-size:0.8em'>"+citation + ": "
+   s+="<strong> Dean AG, Sullivan KM, Soe MM. "
+   s+="OpenEpi:  Open Source Epidemiologic Statistics for Public Health, " + version+". "
+   s+= "www.OpenEpi.com, "+ lcupdated +" "+modDate+ ", "+ accessed + " "+ dateToday+".</strong></p></span>"
+   //alert(s);
+  
+   document.write(s)	  
+} 
+//-->
+</script>
+</head>
+<body bgcolor="#EEEEEE" link=blue vlink="#9999CC" class="Normal" onLoad="writeIntro();">
+
+
+</body>
+
+</html>
